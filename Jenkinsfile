@@ -13,7 +13,7 @@ pipeline
     {
       steps
       { withMaven(globalMavenSettingsConfig: 'null', jdk: 'MyJDK', maven: 'MyMaven', mavenSettingsConfig: 'null') {
-    sh mvn compile }
+    sh 'mvn compile' }
       }
     }
   
