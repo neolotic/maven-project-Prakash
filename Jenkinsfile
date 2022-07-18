@@ -9,6 +9,15 @@ pipeline
       { git branch: 'master', url: 'https://github.com/prakashk0301/maven-project' }
     }
   
+    stage ('Code Compile')
+    {
+      steps
+      { withMaven(globalMavenSettingsConfig: 'null', jdk: 'MyJDK', maven: 'MyMaven', mavenSettingsConfig: 'null') {
+    sh mvn compile }
+      }
+    }
+  
+    
     /* 
     stage ('code build')
     { steps
