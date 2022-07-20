@@ -12,7 +12,7 @@ pipeline
     stage ('Code Compile')
     {
       steps
-      { withMaven(globalMavenSettingsConfig: 'MyGlobalSettings', jdk: 'MyJDK', maven: 'MyMaven', mavenSettingsConfig: 'MySettings') {
+      { withMaven(globalMavenSettingsConfig: 'MyGlobalSettings', jdk: 'MyJDK', maven: 'MyMaven', mavenSettingsConfig: '554637f6-7f4e-494f-9d86-37a449189b91') {
     sh 'mvn compile' }
       }
     }
