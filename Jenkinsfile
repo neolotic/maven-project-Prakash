@@ -14,7 +14,7 @@ pipeline
     {
       steps
       { withMaven(globalMavenSettingsConfig: 'a21b4ed8-8cda-4b77-9a9f-89e6fdcc408b', jdk: 'MyJDK', maven: 'MyMaven') {
-    sh 'mvn package' }
+    bat 'mvn package' }
       }
     }
     
