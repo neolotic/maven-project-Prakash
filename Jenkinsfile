@@ -9,6 +9,16 @@ pipeline
       { git branch: 'master', url: 'https://github.com/prakashk0301/maven-project' }
     }
   
+    
+    stage ('Code Package')
+    {
+      steps
+      { withMaven(globalMavenSettingsConfig: 'a21b4ed8-8cda-4b77-9a9f-89e6fdcc408b', jdk: 'MyJDK', maven: 'MyMaven') {
+    sh 'mvn package' }
+      }
+    }
+    
+    /*
     stage ('Code Compile')
     {
       steps
@@ -18,7 +28,7 @@ pipeline
     }
   
     
-    /* 
+    
     stage ('code build')
     { steps
      { withMaven(globalMavenSettingsConfig: '193254ea-0e8f-4a50-ab38-d01a7d57b6bb', jdk: 'JDK_HOME', maven: 'MVN_HOME') 
